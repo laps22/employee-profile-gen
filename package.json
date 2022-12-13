@@ -1,0 +1,27 @@
+{
+  "name": "employee-profile-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laps22/employee-profile-gen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laps22/employee-profile-gen/issues"
+  },
+  "homepage": "https://github.com/laps22/employee-profile-gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
