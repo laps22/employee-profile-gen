@@ -1,14 +1,14 @@
 {
   "name": "employee-profile-gen",
   "version": "1.0.0",
-  "description": "",
+  "description": "A profile generator that displays card for each employee containing the Employees name, id, and email. The following will be applied specific to the role - Engineer: Github username - Manager: Office Number - Intern: School Name",
   "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/laps22/employee-profile-gen#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }

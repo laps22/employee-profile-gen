@@ -9,12 +9,17 @@ A profile generator that displays card for each employee containing the Employee
 
 This application uses the following to run the program.
 
-Node, Inquirer, and Jests
+Node, Inquirer, and Jests for testing
 
 # Links
 
 Screencastify:
 
 GitHub Repo: https://github.com/laps22/employee-profile-gen.git
+
+
+dist is for the out put
+SRC is forthe actual HTML
+challenge number 9
 
 
