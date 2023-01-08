@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-const generateTeam = require('./dist/team.html');
+const generateTeam = require('./dist/generateHTML');
 
 const team = [];
 
@@ -14,7 +14,7 @@ function managerQuestions() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'manager',
+            name: 'managerName',
             message: 'What is the name of the Manager?',
         },
         {
