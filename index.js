@@ -49,7 +49,7 @@ function menu() {
             choices: ['Add Engineer', 'Add Intern', 'Finished'],
         },
     ]).then(selected => {
-        switch (selected.employee) {
+        switch (selected.select) {
             case 'Add Engineer':
                 engineerQuestions();
                 break;
@@ -67,7 +67,7 @@ function engineerQuestions() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'engineer',
+            name: 'engineerName',
             message: 'Please enter the Engineers name.',
         },
         {
