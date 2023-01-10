@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-const generateTeam = require('./dist/generateHTML');
+const generateHTML = require('./src/generateHTML');
 
 const team = [];
 
@@ -33,7 +33,8 @@ function managerQuestions() {
             message: 'Please enter the office number of the Manager.',
         },
     ]).then(answers => {
-        const manager = new Manager(answers.managerQuestions, answers.data.push(manager));
+        const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice);
+        team.push(manager)
         menu();
 
     });
@@ -55,9 +56,8 @@ function menu() {
             case 'Add Intern':
                 internQuestions();
                 break;
-            case 'Finished':
-                generateTeam();
-                break;
+            default:
+                createTeam();
         }
     });
 };
@@ -86,7 +86,8 @@ function engineerQuestions() {
             message: 'Please enter the Engineers GitHub username.',
         },
     ]).then(answers => {
-        const engineer = new Engineer(answers.engineerQuestions, answers.data.push(engineer));
+        const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub)
+        team.push(engineer);
         menu();
 
     });
@@ -97,7 +98,7 @@ function internQuestions() {
     inquirer.prompt([
         {
             type: 'input',
-            name: 'intern',
+            name: 'internName',
             message: 'Please enter the Interns name.',
         },
         {
@@ -107,7 +108,7 @@ function internQuestions() {
         },
         {
             type: 'input',
-            name: 'internsEmail',
+            name: 'internEmail',
             message: 'Please enter the Interns email.',
         },
         {
@@ -117,11 +118,14 @@ function internQuestions() {
         },
 
     ]).then(answers => {
-        const intern = new Intern(answers.internQuestions, answers.data.push(intern));
+        const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool)
+        team.push(intern);
         menu();
     });
 };
 
 function createTeam() {
-    fs.writeFileSync('./dist/team.html', generateTeam(team));
+    fs.writeFileSync('./dist/team.html', generateHTML(team));
 };
+
+managerQuestions();
