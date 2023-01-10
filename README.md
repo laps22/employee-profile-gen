@@ -19,7 +19,7 @@ To run the app and complete your team profile in the CLI run 'node index.js'
 
 # Links
 
-Screencastify:
+Screencastify: https://drive.google.com/file/d/17uxsqEPVZfrczSp5HkZyRnSF88aXH6J7/view?usp=sharing
 
 GitHub Repo: https://github.com/laps22/employee-profile-gen.git
 
